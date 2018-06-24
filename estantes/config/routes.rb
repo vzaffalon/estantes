@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  resources :users
   resources :exemplars
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :users
   resources :resenhas
   resources :estantes
   resources :livros
