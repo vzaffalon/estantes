@@ -17,7 +17,7 @@ class ExemplarsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create exemplar" do
     assert_difference('Exemplar.count') do
-      post exemplars_url, params: { exemplar: { estante_id: @exemplar.estante_id, livro_id: @exemplar.livro_id, nome: @exemplar.nome } }
+      post exemplars_url, params: { exemplar: { book_id: @exemplar.book_id, estante_id: @exemplar.estante_id, nome: @exemplar.nome } }
     end
 
     assert_redirected_to exemplar_url(Exemplar.last)
@@ -34,7 +34,7 @@ class ExemplarsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update exemplar" do
-    patch exemplar_url(@exemplar), params: { exemplar: { estante_id: @exemplar.estante_id, livro_id: @exemplar.livro_id, nome: @exemplar.nome } }
+    patch exemplar_url(@exemplar), params: { exemplar: { book_id: @exemplar.book_id, estante_id: @exemplar.estante_id, nome: @exemplar.nome } }
     assert_redirected_to exemplar_url(@exemplar)
   end
 

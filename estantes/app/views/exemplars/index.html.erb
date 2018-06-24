@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Nome</th>
-      <th>Livro</th>
+      <th>Book</th>
       <th>Estante</th>
       <th colspan="3"></th>
     </tr>
@@ -16,7 +16,7 @@
     <% @exemplars.each do |exemplar| %>
       <tr>
         <td><%= exemplar.nome %></td>
-        <td><%= exemplar.livro_id %></td>
+        <td><%= exemplar.book_id %></td>
         <td><%= exemplar.estante_id %></td>
         <td><%= link_to 'Show', exemplar %></td>
         <td><%= link_to 'Edit', edit_exemplar_path(exemplar) %></td>

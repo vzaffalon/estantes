@@ -69,6 +69,6 @@ class ExemplarsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def exemplar_params
-      params.require(:exemplar).permit(:nome, :livro_id, :estante_id)
+      params.require(:exemplar).permit(:nome, :book_id, :estante_id)
     end
 end
