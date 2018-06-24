@@ -1,0 +1,2 @@
+class Resenha < ApplicationRecord
+end

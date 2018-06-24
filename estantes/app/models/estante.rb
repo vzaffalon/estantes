@@ -1,0 +1,2 @@
+class Estante < ApplicationRecord
+end

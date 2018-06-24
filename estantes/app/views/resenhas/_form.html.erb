@@ -1,0 +1,32 @@
+<%= form_with(model: resenha, local: true) do |form| %>
+  <% if resenha.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(resenha.errors.count, "error") %> prohibited this resenha from being saved:</h2>
+
+      <ul>
+      <% resenha.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_field :descricao, id: :resenha_descricao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :resenha_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :livro_id %>
+    <%= form.text_field :livro_id, id: :resenha_livro_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
